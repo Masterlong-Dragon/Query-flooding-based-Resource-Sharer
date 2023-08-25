@@ -77,7 +77,7 @@ b)    非功能性需求
 
 1. ## 用例分析
 
-![img](README.assets\clip_image002.jpg)
+![img](README.assets/clip_image002.jpg)
 
  
 
@@ -192,11 +192,11 @@ b)    非功能性需求
 
 |      |                                         |      |
 | ---- | --------------------------------------- | ---- |
-|      | ![img](README.assets\clip_image005.gif) |      |
+|      | ![img](README.assets/clip_image005.gif) |      |
 |      |                                         |      |
-|      | ![img](README.assets\clip_image006.gif) |      |
+|      | ![img](README.assets/clip_image006.gif) |      |
 
-![img](README.assets\clip_image009.gif)                 ![img](README.assets\clip_image010.gif)    
+![img](README.assets/clip_image009.gif)                 ![img](README.assets/clip_image010.gif)    
 
 
 
@@ -211,7 +211,7 @@ b)    非功能性需求
 
 1. 分层领域模型
 
-![img](README.assets\clip_image012.gif)![img](README.assets\clip_image014.gif)![img](README.assets\clip_image016.gif)
+![img](README.assets/clip_image012.gif)![img](README.assets/clip_image014.gif)![img](README.assets/clip_image016.gif)
 
 
 
@@ -227,7 +227,7 @@ b)    非功能性需求
 >
 > 1. Client状态机：
 
-![img](README.assets\clip_image018.jpg)
+![img](README.assets/clip_image018.jpg)
 
  
 
@@ -241,25 +241,25 @@ b)    非功能性需求
 
 Query Processing：查询洪泛子状态机：
 
-![img](README.assets\clip_image020.gif)
+![img](README.assets/clip_image020.gif)
 
-![img](README.assets\clip_image022.jpg)File Downloading：
+![img](README.assets/clip_image022.jpg)File Downloading：
 
  
 
-2. ![img](README.assets\clip_image024.jpg)Server状态机：
+2. ![img](README.assets/clip_image024.jpg)Server状态机：
 
  
 
 3. UML类图设计
 
-![img](README.assets\clip_image026.jpg)**核心领域类：**
+![img](README.assets/clip_image026.jpg)**核心领域类：**
 
-![img](README.assets\clip_image028.jpg)
+![img](README.assets/clip_image028.jpg)
 
-![img](README.assets\clip_image030.jpg)
+![img](README.assets/clip_image030.jpg)
 
-![img](README.assets\clip_image032.jpg)![img](README.assets\clip_image034.jpg)
+![img](README.assets/clip_image032.jpg)![img](README.assets/clip_image034.jpg)
 
  
 
@@ -277,7 +277,7 @@ Query Processing：查询洪泛子状态机：
 
 **关键数据结构：**
 
-![img](README.assets\clip_image036.jpg)![img](README.assets\clip_image038.jpg)**Query****和QueryHit****都实现了序列化/****反序列化方法，便于操作：**
+![img](README.assets/clip_image036.jpg)![img](README.assets/clip_image038.jpg)**Query****和QueryHit****都实现了序列化/****反序列化方法，便于操作：**
 
  
 
@@ -285,9 +285,9 @@ Query Processing：查询洪泛子状态机：
 
  
 
-![img](README.assets\clip_image040.jpg)**工具类：**
+![img](README.assets/clip_image040.jpg)**工具类：**
 
-![img](README.assets\clip_image042.jpg)
+![img](README.assets/clip_image042.jpg)
 
 
 
@@ -337,7 +337,7 @@ c)     mingw-w64-libzip 1.9.2-1 及其依赖
 
  
 
-![img](README.assets\clip_image044.jpg)CMakeLists.txt：
+![img](README.assets/clip_image044.jpg)CMakeLists.txt：
 
  
 
@@ -345,33 +345,33 @@ c)     mingw-w64-libzip 1.9.2-1 及其依赖
 
 主函数，启动Controller：
 
-![img](README.assets\clip_image046.jpg)
+![img](README.assets/clip_image046.jpg)
 
-![img](README.assets\clip_image048.jpg)Controller维护三个关键领域类：Client、Server、UI（由于GTK4限制，该类为静态类），维护两个线程：cs_thread（Client和Server公用一个boost::asio::io_context调度资源）、ui_thread（ui线程）。在构造函数进行相应初始化：
+![img](README.assets/clip_image048.jpg)Controller维护三个关键领域类：Client、Server、UI（由于GTK4限制，该类为静态类），维护两个线程：cs_thread（Client和Server公用一个boost::asio::io_context调度资源）、ui_thread（ui线程）。在构造函数进行相应初始化：
 
 由于退出事件只被UI捕获，因此由UI线程负责结束程序：
 
-![img](README.assets\clip_image050.jpg)Controller运行，加入线程等待结束：
+![img](README.assets/clip_image050.jpg)Controller运行，加入线程等待结束：
 
 
 
  
 
-![img](README.assets\clip_image052.jpg)![img](README.assets\clip_image054.jpg)    Client核心状态，洪范查询模式，对应状态机结构：
+![img](README.assets/clip_image052.jpg)![img](README.assets/clip_image054.jpg)    Client核心状态，洪范查询模式，对应状态机结构：
 
 
 
  
 
-![img](README.assets\clip_image056.jpg)![img](README.assets\clip_image058.jpg)
+![img](README.assets/clip_image056.jpg)![img](README.assets/clip_image058.jpg)
 
-![img](README.assets\clip_image060.jpg)
+![img](README.assets/clip_image060.jpg)
 
-![img](README.assets\clip_image062.jpg)发送查询Query：
+![img](README.assets/clip_image062.jpg)发送查询Query：
 
 C/S文件下载，以Server为代表一窥流程：
 
-![img](README.assets\clip_image064.jpg)开启tcp端口监听socket：
+![img](README.assets/clip_image064.jpg)开启tcp端口监听socket：
 
 如果确认到连接，则新建一条通讯socket接管与Client的通信。
 
@@ -379,21 +379,21 @@ C/S文件下载，以Server为代表一窥流程：
 
  
 
-![img](README.assets\clip_image066.jpg)一些工作细节：
+![img](README.assets/clip_image066.jpg)一些工作细节：
 
 判断请求类型。
 
-![img](README.assets\clip_image068.jpg)Server检测目标是否文件夹。如果为文件夹，采用先打包后整体发送的模式：
+![img](README.assets/clip_image068.jpg)Server检测目标是否文件夹。如果为文件夹，采用先打包后整体发送的模式：
 
 
 
  
 
-![img](README.assets\clip_image070.jpg)    继续告知Client必要信息，对方会对应创建相应的配置：
+![img](README.assets/clip_image070.jpg)    继续告知Client必要信息，对方会对应创建相应的配置：
 
  
 
-![img](README.assets\clip_image072.jpg)分块读取文件到内存，逐个发送：
+![img](README.assets/clip_image072.jpg)分块读取文件到内存，逐个发送：
 
 基于boost:asio，这些过程得以并发地进行。
 
@@ -421,7 +421,7 @@ C/S文件下载，以Server为代表一窥流程：
 
 其中这两个可以为任意位置，为演示方便配置到程序根目录下。
 
-![img](README.assets\clip_image074.jpg)
+![img](README.assets/clip_image074.jpg)
 
  
 
@@ -431,7 +431,7 @@ C/S文件下载，以Server为代表一窥流程：
 
 ​    打开config.ini进行节点的基本配置：
 
-![img](README.assets\clip_image076.jpg)    
+![img](README.assets/clip_image076.jpg)    
 
 
 
@@ -473,7 +473,7 @@ C/S文件下载，以Server为代表一窥流程：
 
 双击Network_proj.exe，可以打开程序GUI。在我的系统（详见前文）上，通常会提示防火墙问题。请依次勾上允许专用网络和公用网络访问，以确保socket通讯的正常进行。
 
-![img](README.assets\clip_image078.jpg)程序的主界面（查询页）如下：
+![img](README.assets/clip_image078.jpg)程序的主界面（查询页）如下：
 
 在查询页，你可以在顶部搜索框输入查询文件名/文件夹名称的前缀名称。
 
@@ -485,7 +485,7 @@ C/S文件下载，以Server为代表一窥流程：
 
 选择你想要的文件，点击下方下载按钮，下载任务会被自动添加。
 
-![img](README.assets\clip_image080.jpg)
+![img](README.assets/clip_image080.jpg)
 
 程序的下载页
 
@@ -499,7 +499,7 @@ C/S文件下载，以Server为代表一窥流程：
 
  
 
-![img](README.assets\clip_image082.jpg)
+![img](README.assets/clip_image082.jpg)
 
 程序的配置页（很遗憾，本来希望实现配置更改功能，未果)：
 
